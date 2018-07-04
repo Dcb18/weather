@@ -1,0 +1,46 @@
+<input type="text" [(ngModel)]=city>
+<button class="button" style="vertical-align:middle" (click)=getWeather()>Search</button>
+<div style="align-content: center">
+  <div *ngIf=weatherMap class="grid-container">
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/cloudy.svg">
+      <p>Main weather</p>
+      {{weatherMap.weather[0].main}}
+    </div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/celsius.svg">
+      <p>temp</p>
+      {{weatherMap.main.temp}}
+
+    </div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/high-temperature.svg">
+      <p>Max temp</p>
+      {{weatherMap.main.temp_max}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/low-temperature.svg">
+      <p>Min temp</p>
+      {{weatherMap.main.temp_min}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/barometer.svg">
+      <p>Pressure</p>
+      {{weatherMap.main.pressure}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/raindrop.svg">
+      <p>Humidity</p>
+      {{weatherMap.main.humidity}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/sunrise.svg">
+      <p>Visibility</p>
+      {{weatherMap.visibility}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/windsock.svg">
+      <p>Wind</p>
+      {{weatherMap.wind.speed}}</div>
+    <div class="grid-item">
+      <img class="grid-icon" src="./../../../assets/images/clouds.svg">
+      <p>Clouds</p>
+      {{weatherMap.clouds.all}}</div>
+  </div>
+  <div id="snackbar">{{message}}</div>
+</div>
